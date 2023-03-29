@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanuman:wght@700&display=swap');
+
+body {
+    overflow: scroll;
+    background-repeat: repeat;
+    background-size: contain;
+}
+.cart-item-div {
+    width: 90%;
+    height: 250px;
+    display: flex;
+    margin-top: 20px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+    border-radius: 3px;
+    background-color: white;
+}
+#your_orders_div {
+    margin-top: 110px !important;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+    overflow: auto;
+    max-height: 65vh;
+}
+.order-product-name {
+    font-family: 'Hanuman', serif;
+    font-size: 40px;
+    margin: 5px;
+}
+.product-name {
+    font-family: 'Hanuman', serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+::-webkit-scrollbar{
+    width: 0;
+}
+.product-image
+{
+    margin-right: 100px;
+}
+    .product_price{
+        margin-right: 0;
+        margin-left: 200px;
+    }
