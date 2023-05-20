@@ -203,4 +203,55 @@ class Buyer
               exit;
         }
     }
+    // public static function place_order()
+    // {
+    //     $stat="select ct.cart_id,ct.product_id,ct.user_id,ct.quantity,pt.address from cart ct inner join person pt on ct.user_id=pt.person_id where user_id={$_SESSION['id']}";
+    //     $cart_items=database::query($stat);
+    //     $o_id=database::query("select max(order_id) as order_id from orders;");
+    //     if(!(count($o_id)-1))
+    //     $o_id=1;
+    //     else
+    //     $o_id=$o_id[0]['order_id']+1;
+    //     if($cart_items=='failure')
+    //     {
+    //         echo "server down";
+    //     }
+    //     else{
+    //         $obj=new transaction();
+    //           $obj->query("BEGIN");
+    //           for($i=0;$i<(count($cart_items)-1);$i++)
+    //           {
+    //             $up_stat="update products set quantity=quantity-{$cart_items[$i]['quantity']} where product_id={$cart_items[$i]['product_id']};";
+    //             $status=$obj->query($up_stat);
+    //             if($status)
+    //             {
+    //                 $ot_stat="insert into orders(order_id,user_id,product_id,address,quantity) values($o_id,{$_SESSION['id']},{$cart_items[$i]['product_id']},'{$cart_items[$i]['address']}',{$cart_items[$i]['quantity']});";
+    //                 if($obj->query($ot_stat))
+    //                 {
+    //                     $stat="delete from cart where cart_id={$cart_items[$i]['cart_id']};";
+    //                     if(!$obj->query($stat))
+    //                     {
+    //                         echo "Server Problem";
+    //                         exit;
+    //                     }
+    //                 } 
+    //                 else
+    //                 {
+    //                     echo "Server Problem";
+    //                     exit;
+    //                 }
+    //             }
+    //             else{
+    //                 $obj->query("ROLLBACK;");
+    //                 echo "out of stock something";
+    //                 exit;
+    //             }
+    //           }
+    //           if($obj->query("COMMIT;"))
+    //           echo "order placed";
+    //           else
+    //           echo "server problem";
+    //           exit;
+    //     }
+    // }
 }

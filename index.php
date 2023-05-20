@@ -1,4 +1,14 @@
 <?php
+// setcookie('Hammer','rohan gaba');
+// echo $_COOKIE['PHPSESSID'];
+// echo "<pre>";
+// print_r($_COOKIE);
+// echo "</pre>";
+// foreach($_COOKIE as $key=>$val)
+// {
+//     echo var_dump($val);
+// }
+// exit;
 include_once 'route/Request.php';
 include_once 'route/Router.php';
 include_once 'controller/mail.php';
@@ -15,7 +25,7 @@ include_once 'route/seller.php';
 include_once 'route/buyer.php';
 include_once 'route/person.php';
 include_once 'route/authentication.php';
-$router->get('/payment',function(){
-    include 'Views/Buyer/payment.php';
-});
+// $router->get('/payment',function(){
+//     include 'Views/Buyer/payment.php';
+// });
 

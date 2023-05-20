@@ -16,7 +16,9 @@ load_more.addEventListener("click", function (event) {
 
     xhr.addEventListener("load", function () {
         if (xhr.responseText == 'failure')
-            alert('something went wrong,please again later');
+            {
+                window.location.href='/server_error'; 
+            }
         let i = 0;
         var data = JSON.parse(xhr.responseText);
         if (!data[0]) {
@@ -117,7 +119,7 @@ function add_to_cart(product_id, target) {
                     target.parentNode.children[0].style.display = "inline";
                 }
                 else {
-                    alert('Something went wrong,Please try again after sometime');
+                    window.location.href='/server_error'; 
                     return;
                 }
             })
@@ -139,7 +141,7 @@ function delete_from_cart(product_id, target) {
             target.parentNode.children[1].style.display = "inline";
         }
         else
-            alert('Something went wrong,Please try again after sometime');
+        window.location.href='/server_error'; 
 
     })
 

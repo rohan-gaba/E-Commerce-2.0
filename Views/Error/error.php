@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Something went wrong</title>
+    <title>Server Error</title>
     <style>
-      /* Define some styles to make the page look nice */
       body {
         font-family: Arial, sans-serif;
         background-color: #f5f5f5;
@@ -28,14 +27,19 @@
         margin-bottom: 30px;
       }
       
-      a {
-        color: #333;
-        text-decoration: none;
-        border-bottom: 2px solid #333;
-      }
       
-      a:hover {
-        border-color: #666;
+      button{
+        color: #fff !important;
+        background-color: #195a6a;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }    
+      button:hover {
+        background-color: #444;
       }
     </style>
   </head>
@@ -43,7 +47,8 @@
     <div class="container">
       <h1>Oops! Something went wrong.</h1>
       <p>We're sorry, but it looks like something went wrong. Please try again later.</p>
-      <p><a href="/">Go back to the homepage</a></p>
+      <button><a href="/" style="color:white;text-decoration:none;">Go back to the homepage</a></button>
+      <p style="font-size:12px;">@HAMMER ENTERPRISES</p>
     </div>
   </body>
 </html>

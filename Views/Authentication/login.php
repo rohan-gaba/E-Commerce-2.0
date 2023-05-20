@@ -21,7 +21,6 @@ background-size: cover;">
       <form  id="login_form" method="POST" action="login.php" onsubmit="return false">
         <h1 style="text-align: center;">Login</h1>
         <p style="color:red; display:none;" id="login_empty">* Values can't be empty</p>
-            <!-- Email input -->
             <div style="text-align: center; margin:2rem">
               <input type="radio" name="who" value="1" id="login_type_admin"><label for="admin"style="margin-right:2rem;">Seller</label>
               <input type="radio" name="who" value="0" id="login_type_user"><label for="user">User</label>

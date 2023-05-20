@@ -12,8 +12,7 @@ function get_address() {
     request.addEventListener("load", function () {
         if(request.responseText=='failure')
         {
-            console.log('failure');
-            // yhan error handling krni h
+            window.location.href='/server_error'; 
         }
         let data = JSON.parse(request.responseText);
         address.innerText = data[0].address;
@@ -40,7 +39,7 @@ function decrease_quantity(id, num) {
             }
         }
         else
-            alert('something went wrong,please try again after sometime');
+        window.location.href='/server_error'; 
 
     })
 }
@@ -60,7 +59,7 @@ function increase_quantity(id, num) {
             let ele = document.getElementById(id + "incr");
             ele.style.display = "none";
         } else
-        alert('something went wrong,please try again after sometime');
+        window.location.href='/server_error'; 
 
     })
 }
@@ -88,7 +87,7 @@ function remove_quantity(id) {
             parent.removeChild(child);
         }
         else
-        alert('something went wrong,please try again after sometime');
+        window.location.href='/server_error'; 
 
     })
 }
@@ -110,7 +109,7 @@ function place_order() {
             window.location.href="/display_cart";
             else
             {
-                alert(request.responseText);
+                window.location.href='/server_error';     
             }
         })}
         else{
@@ -138,7 +137,7 @@ function save_address1() {
 
             }
             else {
-               alert('Something went wrong,please try again after sometime');
+                window.location.href='/server_error'; 
             }
 
         })

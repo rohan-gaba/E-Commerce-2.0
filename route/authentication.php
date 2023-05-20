@@ -44,3 +44,9 @@ $router->post('/forgot_password1',function()
     authentication::is_not_login();
     person::forgot_pass1_post();
 });
+
+$router->get('/server_error',function()
+{
+    include 'Views/Error/error.php';
+    exit;
+});

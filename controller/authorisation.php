@@ -11,16 +11,20 @@ class authorisation{
         exit;
     }
 
+    
     public static function login_post(){
         $obj = json_decode(file_get_contents('php://input'));
         $stat = "select *from person where mail='$obj->mail' and password='$obj->password' and role IN(2,$obj->who)";
+        if(str_contains($stat, ';'))
+        {echo "Please enter valid fields";
+        exit;}
         $data = database::query($stat);
         if($data=='failure')
         {
             echo "Something went wrong,please try again after sometime";
             exit;
         }
-        if ($data[0]) {
+        if ($data[0]&&$data[0]['password']==$obj->password) {
             if ($data[0]['is_verified'] == 1) {
                 $_SESSION["is_log"] = true;
                 $_SESSION["name"] = strtoupper($data[0]['name']);
