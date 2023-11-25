@@ -54,11 +54,12 @@ class Router
    */
   function resolve()
   {
+    global $viewspath;  
     $methodDictionary = $this->{strtolower($this->request->requestMethod)};
     $formatedRoute = $this->formatRoute($this->request->requestUri);
     if(!array_key_exists($formatedRoute,$methodDictionary))
     {
-      include './Views/wrong_route/error.php';
+      include $viewspath .'wrong_route/error.php';
       return;
     }
     $method = $methodDictionary[$formatedRoute];

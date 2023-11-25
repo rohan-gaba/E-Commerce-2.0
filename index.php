@@ -9,8 +9,14 @@
 //     echo var_dump($val);
 // }
 // exit;
-include_once 'route/Request.php';
-include_once 'route/Router.php';
+$incpath = dirname(__FILE__) . '/';
+$ctrlpah = $incpath.'controller/';
+$viewspath = $incpath.'Views/';
+$routepath = $incpath.'route/';
+// echo $viewspath;
+// die();
+require_once $routepath.'Request.php';
+require_once $routepath.'Router.php';
 include_once 'controller/mail.php';
 include_once 'Model/pgsql.php';
 include_once 'controller/authentication.php';
@@ -25,7 +31,7 @@ include_once 'route/seller.php';
 include_once 'route/buyer.php';
 include_once 'route/person.php';
 include_once 'route/authentication.php';
-// $router->get('/payment',function(){
-//     include 'Views/Buyer/payment.php';
-// });
+$router->get('/payment',function(){
+    include 'Views/Buyer/payment.php';
+});
 
